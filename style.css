@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "dots";
+    src: url('Assets/Fonts/Dots.ttf');
+}
+
+@font-face {
+    font-family: "howdy";
+    src: url('Assets/Fonts/Rye-Regular.ttf');
+}
+
+@font-face {
+    font-family: "future-funky";
+    src: url('Assets/Fonts/Asimovian-Regular.ttf');
+}
+
+@font-face {
+    font-family: "future-thin";
+    src: url('Assets/Fonts/Gruppo-Regular.ttf');
+}
+
+
 body {
     text-align: center;
     background-color: black;
@@ -87,11 +108,6 @@ body {
     border-radius: 12px;
 }
 
-.flight {
-    opacity: 0;
-    display:none;
-}
-
 .transformLarge {
     transition: all 5s ease;
 }
@@ -128,12 +144,30 @@ body {
 }
 
 
+.textArt {
+    color:#5d5a5a
+}
+
+.textArt {
+    transition: ease 0.3s;
+}
+
+.textArt:hover {
+    color: rgb(165, 165, 165);
+}
+
+h1 {
+    font-family: 'future-thin', sans-serif;
+    color: rgb(158, 158, 158);
+}
+
 button {
     background-color: #323232;
     border: none;
     padding: 0.8rem 1.4rem;
     margin: 0.5rem;
     border-radius: 8px;
+    font-family: 'dots', sans-serif;
     font-size: 1rem;
 }
 
@@ -144,4 +178,53 @@ button:hover {
 button a {
     text-decoration: none;
     color: #d9d9d9;
+}
+
+.sources {
+    font-family: 'future-thin', sans-serif;
+    color: rgba(93, 93, 93, 0.8);
+    font-size: 0.8rem;
+}
+
+.sources a {
+    text-decoration: none;
+    color: #6e5959;
+}
+
+.sources a:hover {
+    color: #d9d9d9;
+}
+
+/* bird animation */
+.flight {
+    position: fixed;
+    top: 80%;
+    right: 150px; 
+    width: 20px;
+    height: auto;
+    opacity: 0;
+    z-index: 1000;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fly-trigger:hover ~ .flight {
+    animation: flyAcross 5s ease-in-out forwards;
+    opacity: 1;
+}
+
+@keyframes flyAcross {
+    0% {
+        right: 150px;
+        top: 80%;
+        opacity: .2;
+    }
+    50% {
+        top: 60%;
+    }
+    100% {
+        left: 110%;
+        top: 30%;
+        opacity: 0;
+    }
 }

@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "dots";
+    src: url('Assets/Fonts/Dots.ttf');
+}
+
+@font-face {
+    font-family: "howdy";
+    src: url('Assets/Fonts/Rye-Regular.ttf');
+}
+
+@font-face {
+    font-family: "future-funky";
+    src: url('Assets/Fonts/Asimovian-Regular.ttf');
+}
+
+@font-face {
+    font-family: "future-thin";
+    src: url('Assets/Fonts/Gruppo-Regular.ttf');
+}
+
 body {
     font-family: 'Georgia', serif;
     background-color: #fdfcfa;
@@ -34,6 +54,12 @@ p {
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 4;
+    opacity: 0.7;
+}
+
+.lightImages img:first-of-type:hover {
+    transition: ease-in-out 0.7s;
+    opacity: .2;
 }
 
 /* Grid of smaller images */
@@ -45,17 +71,30 @@ p {
 .lightImages img:not(:first-of-type) {
     width: 100%;
     opacity: 0.85;
+    object-fit: contain;
+    border-radius: 12px;
+    opacity: 0.02;
+}
+
+.lightImages img:not(:first-of-type):hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 10px 18px 240px rgb(99, 91, 91);
+    z-index: 100;
 }
 
 h1 {
     font-size: 1.8rem;
     margin: 2.5rem 0 1rem;
     color: #444;
+    font-family: 'future-thin', sans-serif;
 }
 
 button {
     background-color: #e8e8e8;
     border: none;
+    font-family: 'future-funky', sans-serif;
     padding: 0.8rem 1.4rem;
     margin: 0.5rem;
     border-radius: 8px;
@@ -64,9 +103,15 @@ button {
 
 button:hover {
     background-color: #ccc;
+    transition: ease 0.3s;
 }
 
 button a {
     text-decoration: none;
     color: #000;
+}
+
+button a:hover {
+        color: rgba(0, 0, 0, 0.2);
+        transition: ease 0.3s;
 }
