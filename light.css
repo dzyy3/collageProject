@@ -1,4 +1,72 @@
 body {
-    background-color: white;
+    font-family: 'Georgia', serif;
+    background-color: #fdfcfa;
     color: rgb(113, 119, 131);
+    text-align: center;
+    padding: 15px;
+}
+
+p:first-child {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+/* Quotes styling */
+p {
+    font-size: 16px;
+    margin: 10px auto;
+    max-width: 700px;
+    font-style: italic;
+}
+
+
+#resizeHumans {
+    scale: 110%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+/*Center Image*/
+.lightImages img:first-of-type {
+    border-radius: 12px;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* Grid of smaller images */
+.lightImages {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
+}
+
+.lightImages img:not(:first-of-type) {
+    width: 100%;
+    opacity: 0.85;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1rem;
+    color: #444;
+}
+
+button {
+    background-color: #e8e8e8;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+button a {
+    text-decoration: none;
+    color: #000;
 }

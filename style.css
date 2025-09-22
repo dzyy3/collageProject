@@ -1,4 +1,147 @@
 body {
+    text-align: center;
     background-color: black;
     color: white;
+}
+
+.spatialBody {
+    background-image: url("Assets/Other/Other (5).gif");
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.grid-container {
+    justify-content: center;
+    display: grid;
+    /* grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, 200px); */
+    grid-auto-rows: 200px;
+    grid-auto-columns: 200px;
+    gap: 1em;
+    padding: 10px;
+    grid-template-areas: 
+        "text-1 text-1 text-1 box-10 box-10"
+        "box-1 box-2 box-3 box-4 box-5"
+        "box-6 box-7 box-8 box-9 box-11";
+}
+
+.grid-container2 {
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 1em;
+    padding: 20px;
+    grid-template-areas: 
+        "box-1 box-1 box-1 box-2 box-2 box-6"
+        "box-1 box-1 box-1 box-2 box-2 box-0"
+        "box-1 box-1 box-1 box-00 box-7 box-7"
+        "box-4 box-4 box-4 box-3 box-7 box-7"
+        "box-4 box-4 box-4 box-8 box-8 box-5"
+        "box-4 box-4 box-4 box-8 box-8 box-5";
+}
+
+.grid-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.grid-container3 {
+    justify-content: center;
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 1em;
+    padding: 20px;
+    grid-template-areas: 
+        "box-1 box-1 box-1 box-2 box-2 box-3"
+        "box-1 box-1 box-1 box-2 box-2 box-0"
+        "box-1 box-1 box-1 box-00 box-7 box-7";
+}
+
+.grid-container3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.box:hover {
+    box-shadow: #d9d9d9 0px 0px 20px;
+}
+
+.grid-container p {
+    margin-top: 85px;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.flight {
+    opacity: 0;
+    display:none;
+}
+
+.transformLarge {
+    transition: all 5s ease;
+}
+
+.transformLarge:hover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100 vw;
+    height: 100 vh;
+    /* z-index: -1; */
+
+    background-image: url('Assets/Spatial/Spatial (3).gif');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+}
+
+
+/* Responsive Webpage !!!! */
+
+@media(max-width: 42em){
+    .grid-container {
+        grid-template-areas: 
+            "text-1 text-1"
+            "box-10 box-10"
+            "box-1 box-2"
+            "box-3 box-4"
+            "box-5 box-6"
+            "box-7 box-8"
+            "box-9 box-11";
+    }
+}
+
+
+button {
+    background-color: #323232;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #6e5959;
+}
+
+button a {
+    text-decoration: none;
+    color: #d9d9d9;
 }
