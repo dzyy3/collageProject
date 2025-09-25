@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+/* Main image */
+#main-image {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.8s ease; 
+}
+
+#main-image {
+  transition: opacity 0.8s ease;
+  opacity: 1;
+}
+
+/* fade classes used by the script */
+#main-image.fade-out { opacity: 0; }
+#main-image.fade-in  { opacity: 1; }
+
+
+#main-image.fade-out {
+  opacity: 0;
+}
+
+#main-image.fade-in {
+  opacity: 1;
+}
+
+/* Nav bar */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  background: #222;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border: 2px solid transparent;
+  cursor: not-allowed;
+  border-radius: 8px;
+}
+
+/* The current clickable one */
+.nav-item.active img {
+  filter: grayscale(0%);
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+/* Completed ones */
+.nav-item.completed img {
+  filter: grayscale(0%);
+  border: 2px solid limegreen;
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.label {
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  color: limegreen;
+  display: none;
+}
+
+.nav-item.completed .label {
+  display: block;
+}
