@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "future-thin";
+    src: url('/Assets/Fonts/Gruppo-Regular.ttf');
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -9,7 +14,7 @@ body {
 /* Main image */
 #main-image {
   width: 100%;
-  max-height: 60vh;
+  max-height: 90vh;
   object-fit: cover;
   display: block;
   opacity: 1;
@@ -49,12 +54,17 @@ body {
 
 .nav-item img {
   width: 100px;
-  height: 60px;
+  height: 80px;
   object-fit: cover;
   filter: grayscale(100%);
   border: 2px solid transparent;
   cursor: not-allowed;
   border-radius: 8px;
+}
+
+.nav-item img:hover {
+  filter: grayscale(50%);
+  cursor: pointer;
 }
 
 /* The current clickable one */
@@ -76,11 +86,36 @@ body {
   bottom: -1.5em;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8em;
+  font-size: 0.6em;
   color: limegreen;
   display: none;
 }
 
 .nav-item.completed .label {
   display: block;
+}
+
+
+h1 {
+    font-family: 'future-thin', sans-serif;
+    color: rgb(158, 158, 158);
+}
+
+button {
+    background-color: #323232;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    font-family: 'dots', sans-serif;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #6e5959;
+}
+
+button a {
+    text-decoration: none;
+    color: #d9d9d9;
 }

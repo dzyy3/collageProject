@@ -4,19 +4,19 @@ let currentStep = 0;
 
 // Arrays: put your file names here
 const gifs = [
-  "Assets/test.gif",
-  "Assets/test.gif",
-  "Assets/test.gif",
-  "Assets/test.gif",
-  "Assets/test.gif"
+  "Assets/animations/Driving.gif",
+  "Assets/animations/Birthday.gif",
+  "Assets/animations/Snow.gif",
+  "Assets/animations/Shooting.gif",
+  "Assets/animations/Drinking.gif"
 ];
 
 const staticImages = [
-  "Assets/imgTest.png",
-  "Assets/imgTest.png",
-  "Assets/imgTest.png",
-  "Assets/imgTest.png",
-  "Assets/imgTest.png"
+  "Assets/backgrounds/portrait (2).png",
+  "Assets/backgrounds/portrait (3).png",
+  "Assets/backgrounds/portrait (4).png",
+  "Assets/backgrounds/portrait (5).png",
+  "Assets/backgrounds/portrait (6).png"
 ];
 
 navItems.forEach((item, index) => {
